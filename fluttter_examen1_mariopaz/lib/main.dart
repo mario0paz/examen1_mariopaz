@@ -1,32 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-void main() {
-  runApp(const MyApp());
-}
+import 'package:flutter_navigation_go_router/router/main_router.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+main() => runApp(const MainApp());
 
- 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp.router(
-      debugShowCheckedModeBanner: false,
-      routerConfig: router,
-    );
-  }
-}void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MainApp extends StatelessWidget {
+  const MainApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      routerConfig: mainRouter,
       debugShowCheckedModeBanner: false,
-      routerConfig: router,
+      theme: ThemeData(primarySwatch: Colors.blue, useMaterial3: true),
     );
   }
 }
