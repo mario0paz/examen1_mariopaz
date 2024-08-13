@@ -72,6 +72,10 @@ flutter:
     - assets/podcast/
     - assets/lista_tareas/
     - assets/noticias/
+    - assets/menu_principal/icono_noticias.png
+    - assets/menu_principal/icono_cambio_moneda.png
+    - assets/menu_principal/icono_lista_tareas.png
+    - assets/menu_principal/icono_podcast.png
     
 
 
