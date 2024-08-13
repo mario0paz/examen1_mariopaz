@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:examen1_mariopaz/pantallas/index.dart';
 import 'package:go_router/go_router.dart';
 
 import 'package:examen1_mariopaz/pantallas/screens/menu_principal.dart';
