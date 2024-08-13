@@ -7,15 +7,15 @@ class CambioMonedaScreen extends StatefulWidget {
 }
 
 class _CambioMonedaScreenState extends State<CambioMonedaScreen> {
-  double tasaCompra = 24.68;  
-  double tasaVenta = 24.80;   
+  double tasaCompra = 24.68;
+  double tasaVenta = 24.80;
   double resultado = 0.0;
-  
+
   final TextEditingController _controller = TextEditingController();
 
   void convertirDolaresALempiras(double valorDolares) {
     setState(() {
-      resultado = valorDolares * tasaVenta;  
+      resultado = valorDolares * tasaVenta;
     });
   }
 
@@ -37,14 +37,24 @@ class _CambioMonedaScreenState extends State<CambioMonedaScreen> {
             SizedBox(height: 16),
             Row(
               children: [
-                ElevatedButton(
+                ElevatedButton.icon(
                   onPressed: () {},
-                  child: Text('Dólar'),
+                  icon: Image.asset(
+                    'assets/cambio_moneda/icono_dolar.png',
+                    width: 24,
+                    height: 24,
+                  ),
+                  label: Text('Dólar'),
                 ),
                 SizedBox(width: 16),
-                ElevatedButton(
+                ElevatedButton.icon(
                   onPressed: () {},
-                  child: Text('Lempira'),
+                  icon: Image.asset(
+                    'assets/cambio_moneda/icono_euro.png',
+                    width: 24,
+                    height: 24,
+                  ),
+                  label: Text('Euro'),
                 ),
               ],
             ),
@@ -54,6 +64,12 @@ class _CambioMonedaScreenState extends State<CambioMonedaScreen> {
               children: [
                 Column(
                   children: [
+                    Image.asset(
+                      'assets/cambio_moneda/icono_tasa_compra.png',
+                      width: 24,
+                      height: 24,
+                    ),
+                    SizedBox(height: 8),
                     Text(
                       'Compra',
                       style: TextStyle(color: Colors.blue),
@@ -64,6 +80,12 @@ class _CambioMonedaScreenState extends State<CambioMonedaScreen> {
                 SizedBox(width: 32),
                 Column(
                   children: [
+                    Image.asset(
+                      'assets/cambio_moneda/icono_tasa_venta.png',
+                      width: 24,
+                      height: 24,
+                    ),
+                    SizedBox(height: 8),
                     Text(
                       'Venta',
                       style: TextStyle(color: Colors.blue),

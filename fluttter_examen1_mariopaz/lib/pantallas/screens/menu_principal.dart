@@ -13,28 +13,28 @@ class MenuPrincipalScreen extends StatelessWidget {
       body: ListView(
         children: [
           ListTile(
-            leading: Icon(Icons.article),
+            leading: Image.asset('assets/menu_principal/icono_noticias.png'),
             title: Text('Noticias'),
             onTap: () {
               context.go('/noticias');
             },
           ),
           ListTile(
-            leading: Icon(Icons.attach_money),
+            leading: Image.asset('assets/menu_principal/icono_cambio_moneda.png'),
             title: Text('Cambio de Moneda'),
             onTap: () {
               context.go('/cambio_moneda');
             },
           ),
           ListTile(
-            leading: Icon(Icons.list),
-            title: Text('lista de tareas'),
+            leading: Image.asset('assets/menu_principal/icono_lista_tareas.png'),
+            title: Text('Lista de Tareas'),
             onTap: () {
               context.go('/lista_tareas');
             },
           ),
           ListTile(
-            leading: Icon(Icons.podcast),
+            leading: Image.asset('assets/menu_principal/icono_podcast.png'),
             title: Text('Podcast'),
             onTap: () {
               context.go('/podcast');

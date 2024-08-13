@@ -65,10 +65,15 @@ flutter:
   #   - images/a_dot_ham.jpeg
 
   assets:
-    - assets/cambio_moneda/
+    - assets/cambio_moneda/icono_dolar.png
+    - assets/cambio_moneda/icono_lempira.png
+    - assets/cambio_moneda/icono_tasa_de_compra.png
+    - assets/cambio_moneda/icono_tasa_de_venta.png
     - assets/podcast/
     - assets/lista_tareas/
     - assets/noticias/
+    
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
