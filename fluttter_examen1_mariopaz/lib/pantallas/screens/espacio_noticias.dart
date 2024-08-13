@@ -1,59 +1,66 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Noticias',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: NoticiasScreen(),
+    );
+  }
+}
+
 class NoticiasScreen extends StatelessWidget {
   const NoticiasScreen({Key? key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Noticias'),
+        title: Text('Noticias'),
       ),
       body: ListView(
-        padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(8.0),
         children: [
-          _buildNoticiaItem(
-            'Isak marca un hat-trick en la victoria del newcastle united',
-            '10 min',
+          ListTile(
+            leading: Image.asset('assets/noticias/Iman_isak_gol.png'),
+            title: Text('Isak marca un hat-trick en la victoria del newcastle united'),
+            subtitle: Text('10 min'),
           ),
-          const Divider(),
-          _buildNoticiaItem(
-            'Title',
-            'Details',
-            buttons: ['BUTTON1', 'BUTTON2'],
+          ListTile(
+            title: Text('Title'),
+            subtitle: Text('Details'),
+            trailing: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text('BUTTON1'),
+                ),
+                SizedBox(width: 10),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text('BUTTON2'),
+                ),
+              ],
+            ),
           ),
-          const Divider(),
-          _buildNoticiaItem(
-            'Real Madrid empatan en un emocionante clásico.',
-            '10 min',
+          ListTile(
+            leading: Image.asset('assets/noticias/madrid_robo_clasico.png'),
+            title: Text('Real Madrid roba una ves mas en un emocionante clásico.'),
+            subtitle: Text('10 min'),
           ),
         ],
       ),
-    );
-  }
-
-  Widget _buildNoticiaItem(String title, String subtitle, {List<String>? buttons}) {
-    return ListTile(
-      leading: const CircleAvatar(
-        child: Icon(Icons.article),
-      ),
-      title: Text(title),
-      subtitle: Text(subtitle),
-      trailing: buttons == null
-          ? const Icon(Icons.image, size: 50)
-          : Row(
-              mainAxisSize: MainAxisSize.min,
-              children: buttons
-                  .map((button) => Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 4.0),
-                        child: ElevatedButton(
-                          onPressed: () {},
-                          child: Text(button),
-                        ),
-                      ))
-                  .toList(),
-            ),
     );
   }
 }

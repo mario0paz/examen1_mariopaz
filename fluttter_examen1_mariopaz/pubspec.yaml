@@ -69,7 +69,9 @@ flutter:
     - assets/cambio_moneda/icono_lempira.png
     - assets/cambio_moneda/icono_tasa_de_compra.png
     - assets/cambio_moneda/icono_tasa_de_venta.png
-    - assets/podcast/
+    - assets/podcast/icono_play.png
+    - assets/podcast/icono_pause.png
+    - assets/podcast/icono_repetir.png
     - assets/lista_tareas/
     - assets/noticias/
     - assets/menu_principal/icono_noticias.png
