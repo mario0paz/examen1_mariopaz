@@ -5,7 +5,7 @@ import 'package:examen1_mariopaz/pantallas/screens/menu_principal.dart';
 import 'package:examen1_mariopaz/pantallas/screens/espacio_noticias.dart';
 import 'package:examen1_mariopaz/pantallas/screens/cambio_moneda.dart';
 import 'package:examen1_mariopaz/pantallas/screens/lista_tareas.dart';
-import 'package:examen1_mariopaz/pantallas/screens/podcast.dart';
+import 'package:examen1_mariopaz/pantallas/screens/podcast.dart';  
 
 final mainRouter = GoRouter(
   routes: [
